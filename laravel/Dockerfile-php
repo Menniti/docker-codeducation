@@ -1,0 +1,16 @@
+FROM php:7.3-cli
+
+## RUN para uso de comandos
+
+RUN pecl install swoole \
+    && docker-php-ext-enable swoole
+
+# RUN docker-php-ext-enable swoole
+
+COPY index.php /var/www 
+
+EXPOSE 9501
+
+## ENTRYPOINT funciona como comando para quando o container inicia
+
+ENTRYPOINT [ "php","/var/www/index.php","start" ]
