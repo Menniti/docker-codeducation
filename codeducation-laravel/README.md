@@ -1,10 +1,11 @@
-## Start
+## Start (OBS: A API localhost:8000 retorna pasta bloqueada do laravel.)
 
 ### docker-compose
 
 ```
+git clone https://github.com/Menniti/docker-codeducation
 cd codeducation-laravel
-docker-compose up
+docker-compose up --build
 
 ```
 
